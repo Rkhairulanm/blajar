@@ -25,7 +25,7 @@ class SiswaController extends Controller
      */
     public function create()
     {
-        //
+        return view('create');
     }
 
     /**
@@ -36,7 +36,7 @@ class SiswaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        return 'asd';
     }
 
     /**
@@ -45,7 +45,7 @@ class SiswaController extends Controller
      * @param  \App\Models\Siswa  $siswa
      * @return \Illuminate\Http\Response
      */
-    public function show(Siswa $siswa)
+    public function show($siswa)
     {
         $data = siswa::where('NIK',$siswa)->first();
         return view('show')->with('data', $data);
